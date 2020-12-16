@@ -2,11 +2,6 @@
 
 *This project is like an astrology generator, inspirational message, or nonsensical jokes.*
 
-**Table of contents**
-General info
-Inspiration
-Contact
-
 **General info**
 Every time a user runs a program, they should get a new, randomized output.
 
