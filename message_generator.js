@@ -25,3 +25,7 @@ const dataBase = {
         'Can February March? No, but April May!'
     ]
 };
+// Store a Message to an Array
+const personalMessage = [];
+// Generate a random number to choose one message from every base in dataBase
+const randomNumber = num => Math.floor(Math.random() * num);
