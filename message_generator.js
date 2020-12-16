@@ -23,9 +23,32 @@ const dataBase = {
         'A fast beating heart doesn’t always mean love. A blushing face is not always a sign that you’re in love. Sometimes hubog lang! Hahaha',
         'You can’t trust atoms. They make up everything!',
         'Can February March? No, but April May!'
-    ]
+    ],
+    emptyBase: []
 };
 // Store a Message to an Array
 const personalMessage = [];
 // Generate a random number to choose one message from every base in dataBase
 const randomNumber = num => Math.floor(Math.random() * num);
+// Making iteration over the dataBase object
+for (let array in dataBase) {
+    let messageToSelect = randomNumber(dataBase[array].length);
+    switch(array) {
+        case 'astrologyBase':
+            personalMessage.push(`You astrology message for today: ${dataBase[array][messageToSelect]}`);
+            break;
+        case 'inspirationBase':
+            personalMessage.push(`You inspiration message for today: ${dataBase[array][messageToSelect]}`);
+            break;
+        case 'jokesBase':
+            personalMessage.push(`You joke message for today: ${dataBase[array][messageToSelect]}`);
+            break;
+        default:
+            personalMessage.push(`There is no message for ${array} topic.`)
+    }
+}
+const formatMessage = (message) => {
+    let newFormat = personalMessage.join('\n');
+    console.log(newFormat);
+}
+formatMessage(personalMessage);
